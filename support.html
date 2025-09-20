@@ -3,41 +3,112 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Flaggy - Destek</title>
-  <meta name="description" content="Flaggy World Flags Quiz için yardım ve destek sayfası. İletişim, SSS ve hata bildirimi." />
+  <title>Flaggy – Destek / Support</title>
+  <meta name="description" content="Flaggy World Flags Quiz destek ve iletişim sayfası. / Support and contact for Flaggy World Flags Quiz." />
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:860px;margin:40px auto;padding:0 16px;line-height:1.6;color:#0f172a}
+    :root { --ink:#0f172a; --muted:#475569; --bg:#f8fafc; --line:#e2e8f0; --brand:#2563eb; }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:860px;margin:40px auto;padding:0 16px;line-height:1.6;color:var(--ink)}
     h1{font-size:clamp(24px,3.6vw,32px);margin:0 0 12px;font-weight:800}
     h2{margin-top:28px}
-    a{color:#2563eb;text-decoration:none} a:hover{text-decoration:underline}
-    .card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:16px;margin:12px 0}
-    .muted{color:#475569}
+    a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+    .card{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0}
+    .muted{color:var(--muted)}
+    .lang{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+    .pill{border:1px solid var(--line);padding:6px 10px;border-radius:999px;cursor:pointer}
+    .pill.active{background:var(--ink);border-color:var(--ink);color:#fff}
+    footer{margin-top:24px}
+    .hide{display:none}
   </style>
 </head>
 <body>
-  <h1>Flaggy – Destek</h1>
-  <p class="muted">Bu sayfa, <strong>Flaggy: World Flags Quiz</strong> için yardım ve iletişim bilgilerini içerir.</p>
-
-  <div class="card">
-    <h2>İletişim</h2>
-    <p>Her türlü soru, öneri veya sorun bildirimi için bize e-posta gönderebilirsiniz:</p>
-    <p><a href="mailto:mert.kosemogullari@gmail.com">flaggy.support@gmail.com</a></p>
-    <!-- İstersen burada kendi e-postanı kullan: ör. mert.kosemogullari@gmail.com -->
+  <div class="lang" role="tablist" aria-label="Language">
+    <button id="btn-tr" class="pill" role="tab" aria-selected="true">Türkçe</button>
+    <button id="btn-en" class="pill" role="tab" aria-selected="false">English</button>
   </div>
 
-  <div class="card">
-    <h2>SSS (Kısa)</h2>
-    <p><strong>Reklamlar neden görünüyor?</strong><br>Oyunun ücretsiz kalması için reklam gösteriyoruz. Test aşamasında “Test Mode” etiketi görülebilir; canlı sürümde görünmez.</p>
-    <p><strong>Yanlış bayrak/isim gördüm, ne yapmalıyım?</strong><br>Hata detayını ve mümkünse ekran görüntüsünü e-posta ile iletin.</p>
-  </div>
+  <!-- TR -->
+  <section id="tr">
+    <h1>Flaggy – Destek</h1>
+    <p class="muted"><strong>Flaggy: World Flags Quiz</strong> için yardım ve iletişim bilgileri.</p>
 
-  <div class="card">
-    <h2>Hata Bildirimi</h2>
-    <p>Uygulama sürümü, cihaz modeli, iOS sürümü ve problemi tekrar etme adımlarını ekleyerek bize yazın. Hızlıca inceleyelim.</p>
-  </div>
+    <div class="card">
+      <h2>İletişim</h2>
+      <p>Her türlü soru, öneri veya sorun bildirimi için bize e-posta gönderebilirsiniz:</p>
+      <p><a href="mailto:mert.kosemogullari@gmail.com">mert.kosemogullari@gmail.com</a></p>
+    </div>
 
-  <p class="muted">Gizlilik politikamız: 
-    <a href="https://ksemogullar.github.io/flaggy-privacy-policy/">flaggy-privacy-policy</a>
-  </p>
+    <div class="card">
+      <h2>Sık Sorulanlar</h2>
+      <p><strong>Reklamlarda “Test Mode” görünüyor, normal mi?</strong><br>
+      Evet. Geliştirme/test sırasında görünebilir; canlı sürüm kullanıcılara görünmez.</p>
+      <p><strong>Yanlış bayrak/isim gördüm, ne yapmalıyım?</strong><br>
+      Ekran görüntüsü ve kısa açıklama ile e-posta atın, hızlıca düzeltelim.</p>
+    </div>
+
+    <div class="card">
+      <h2>Hata Bildirimi</h2>
+      <p>Uygulama sürümü, cihaz modeli, iOS sürümü ve tekrarlama adımlarını ekleyerek yazın.</p>
+    </div>
+
+    <footer class="muted">
+      Gizlilik politikamız:
+      <a href="https://ksemogullar.github.io/flaggy-privacy-policy/">flaggy-privacy-policy</a>
+    </footer>
+  </section>
+
+  <!-- EN -->
+  <section id="en" class="hide" lang="en">
+    <h1>Flaggy – Support</h1>
+    <p class="muted">Help and contact information for <strong>Flaggy: World Flags Quiz</strong>.</p>
+
+    <div class="card">
+      <h2>Contact</h2>
+      <p>For any questions, suggestions, or bug reports, email us at:</p>
+      <p><a href="mailto:mert.kosemogullari@gmail.com">mert.kosemogullari@gmail.com</a></p>
+    </div>
+
+    <div class="card">
+      <h2>FAQ</h2>
+      <p><strong>I see “Test Mode” on ads, is that normal?</strong><br>
+      Yes. It can appear during development/testing; it won’t appear for users in production.</p>
+      <p><strong>I found a wrong flag/name, what should I do?</strong><br>
+      Email a short note with a screenshot and we’ll fix it quickly.</p>
+    </div>
+
+    <div class="card">
+      <h2>Bug Reporting</h2>
+      <p>Please include app version, device model, iOS version, and steps to reproduce.</p>
+    </div>
+
+    <footer class="muted">
+      Privacy policy:
+      <a href="https://ksemogullar.github.io/flaggy-privacy-policy/">flaggy-privacy-policy</a>
+    </footer>
+  </section>
+
+  <script>
+    const tr = document.getElementById('tr');
+    const en = document.getElementById('en');
+    const btr = document.getElementById('btn-tr');
+    const ben = document.getElementById('btn-en');
+
+    function setLang(lang){
+      const isTR = lang === 'tr';
+      tr.classList.toggle('hide', !isTR);
+      en.classList.toggle('hide', isTR);
+      btr.classList.toggle('active', isTR);
+      ben.classList.toggle('active', !isTR);
+      btr.setAttribute('aria-selected', isTR);
+      ben.setAttribute('aria-selected', !isTR);
+      document.documentElement.lang = isTR ? 'tr' : 'en';
+    }
+
+    // Auto-pick by browser language on first load
+    const pref = (navigator.language || 'en').toLowerCase().startsWith('tr') ? 'tr' : 'en';
+    setLang(pref);
+
+    btr.addEventListener('click', ()=>setLang('tr'));
+    ben.addEventListener('click', ()=>setLang('en'));
+  </script>
 </body>
 </html>
